@@ -1,3 +1,6 @@
+webpy
+web
+
 # Hide sublime text stuff
 *.sublime-project
 *.sublime-workspace
@@ -51,3 +54,4 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
