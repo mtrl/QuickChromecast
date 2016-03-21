@@ -1,5 +1,6 @@
 webpy/*
 web
+nohup.out
 
 # Hide sublime text stuff
 *.sublime-project
