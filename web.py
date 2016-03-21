@@ -14,13 +14,15 @@ urls = (
     '/img/(.*)', 'images'
 )
 
+chromecast_name = "Downstairs"
+
 root_url = "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/nonuk/sbr_low/llnw/"
 app = web.application(urls, globals())
 render = web.template.render('templates/', base='base')
 
 class home:
     def GET(self):
-        return render.home('Welcome')
+        return render.home('')
 
 class play:
     def GET(self, station):
@@ -31,7 +33,7 @@ class play:
             media_uri = "bbc_6music.m3u8"
             station = "Radio 6"
         cast =  pychromecast.get_chromecasts_as_dict().keys()
-        cast = pychromecast.get_chromecast(friendly_name="Downstairs")
+        cast = pychromecast.get_chromecast(friendly_name=chromecast_name)
         cast.wait()
         mc = cast.media_controller
         mc.play_media(root_url + media_uri, 'application/x-mpegURL')
@@ -43,7 +45,7 @@ class play:
 class stop:
     def GET(self):
     	cast =  pychromecast.get_chromecasts_as_dict().keys()
-    	cast = pychromecast.get_chromecast(friendly_name="Downstairs")
+    	cast = pychromecast.get_chromecast(friendly_name=chromecast_name)
     	cast.wait()
     	mc = cast.media_controller
     	mc.pause()

@@ -1,5 +1,6 @@
 $def with (message)
 <div class="row">
+$if message:
   <div class="col-md-12">
       <p class="alert alert-success">
         $message
@@ -7,23 +8,23 @@ $def with (message)
   </div>
 </div>
 <div class="row">
-  <div class="col-md-10">
+  <div class="col-md-12">
       <p>
-        <a href="/play/radio4" class="btn btn-info white-bg"><img src="/img/radio4.jpg"></a>
+        <a href="/play/radio4" class="btn btn-info white-bg full-width"><img src="/img/radio4.jpg"></a>
     </p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
       <p>
-        <a href="/play/radio6" class="btn btn-info white-bg"><img src="/img/radio6.jpg"></a>
+        <a href="/play/radio6" class="btn btn-info white-bg full-width"><img src="/img/radio6.jpg"></a>
     </p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
       <p>
-        <a href="/stop" class="btn btn-info">Stop</a>
+        <a href="/stop" class="btn btn-info full-width">Stop</a>
     </p>
   </div>
 </div>
