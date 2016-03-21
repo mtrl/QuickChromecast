@@ -32,14 +32,7 @@ class play:
         if station == "radio6":
             media_uri = "bbc_6music.m3u8"
             station = "Radio 6"
-        cast =  pychromecast.get_chromecasts_as_dict().keys()
-        cast = pychromecast.get_chromecast(friendly_name=chromecast_name)
-        cast.wait()
-        mc = cast.media_controller
-        mc.play_media(root_url + media_uri, 'application/x-mpegURL')
-        mc.pause()
-        time.sleep(2)
-        mc.play()
+        
         return render.home('Playing ' + station)
 
 class stop:
