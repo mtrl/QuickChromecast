@@ -34,7 +34,7 @@ class play:
         cast = pychromecast.get_chromecast(friendly_name="Downstairs")
         cast.wait()
         mc = cast.media_controller
-        mc.play_media(root_url + media_url, 'application/x-mpegURL')
+        mc.play_media(root_url + media_uri, 'application/x-mpegURL')
         mc.pause()
         time.sleep(2)
         mc.play()
